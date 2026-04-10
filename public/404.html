@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages SPA fallback: redirect unknown routes to index with preserved path.
+      // Basically copy paste this to handle support client side routing in Single Page application like React, Vue, Angular, etc)
+      (function () {
+
+        var l = window.location;
+        var baseSegmentsToKeep = 1;
+        var pathnameParts = l.pathname.split("/");
+        var keptBase = pathnameParts.slice(0, 1 + baseSegmentsToKeep).join("/");
+        var appPath = pathnameParts.slice(1 + baseSegmentsToKeep).join("/");
+        var target =
+          keptBase +
+          "/?p=" +
+          encodeURIComponent("/" + appPath + l.search + l.hash).replace(
+            /&/g,
+            "~and~",
+          );
+
+        l.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

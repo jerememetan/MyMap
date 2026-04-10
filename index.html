@@ -5,6 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my-map</title>
+    <script>
+      // GitHub Pages SPA fallback: convert ?/path back into /path before app boot.
+      (function () {
+        var redirect = window.location.search.match(/^[?&]p=([^&]+)/);
+        if (!redirect) return;
+
+        var decodedPath = decodeURIComponent(redirect[1]).replace(
+          /~and~/g,
+          "&",
+        );
+        var newUrl = decodedPath + window.location.hash;
+        window.history.replaceState(null, null, newUrl);
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>
