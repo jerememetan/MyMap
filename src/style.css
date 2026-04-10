@@ -296,3 +296,38 @@ code {
     border-right-color: var(--border);
   }
 }
+
+.library-page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.library-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+.library-demo-image {
+  width: 100%;
+  max-width: 360px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.library-demo-map {
+  width: 100%;
+  max-width: 520px;
+}
+
+.library-demo-map-caption {
+  color: #0f172a;
+  opacity: 0.85;
+}
