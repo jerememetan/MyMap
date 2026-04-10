@@ -213,41 +213,16 @@ onBeforeUnmount(() => {
 
 <template>
   <section
-    class="interactive-map-line"
+    class="relative w-full overflow-hidden rounded-[14px] border border-[var(--border)] bg-slate-200"
     :style="{ minHeight: resolvedMinHeight }"
   >
-    <div ref="mapEl" class="map-canvas" />
+    <div ref="mapEl" class="absolute inset-0" />
 
-    <div v-if="mapError" class="map-error">
+    <div
+      v-if="mapError"
+      class="absolute bottom-3 left-3 right-3 rounded-[10px] bg-slate-900/85 px-3 py-2 text-[13px] text-slate-50"
+    >
       {{ mapError }}
     </div>
   </section>
 </template>
-
-<style scoped>
-.interactive-map-line {
-  position: relative;
-  width: 100%;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  background: #e2e8f0;
-}
-
-.map-canvas {
-  position: absolute;
-  inset: 0;
-}
-
-.map-error {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border-radius: 10px;
-  background: rgba(15, 23, 42, 0.85);
-  color: #f8fafc;
-  padding: 10px 12px;
-  font-size: 13px;
-}
-</style>

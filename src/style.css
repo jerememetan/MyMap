@@ -331,3 +331,23 @@ code {
   color: #0f172a;
   opacity: 0.85;
 }
+
+.timeline-demo-section {
+  min-height: 220px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  background: color-mix(in srgb, var(--bg) 92%, #e2e8f0 8%);
+}
+
+.timeline-demo-section h3 {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.timeline-demo-section p {
+  color: var(--text);
+}
