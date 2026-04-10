@@ -54,17 +54,6 @@ const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? "";
         >
       </MapPlaceholder>
 
-      <p>Connection variant with two pins (KLCC to Merdeka 118):</p>
-      <MapPlaceholder
-        class="library-demo-map"
-        variant="connection"
-        :latitude="3.1579"
-        :longitude="101.7123"
-        :latitude2="3.1394"
-        :longitude2="101.699"
-        :title="null"
-        :subtitle="null"
-      />
     </article>
 
     <article class="library-card">
