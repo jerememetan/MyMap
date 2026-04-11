@@ -66,7 +66,7 @@ const timelineSections = [
   <main>
     <Timeline :sections="timelineSections" :top-offset="110" />
 
-    <div class="mx-auto w-full max-w-6xl space-y-16 pb-20 pt-8">
+    <div class="mx-auto w-full max-w-6xl space-y-16 pb-8 pt-8">
       <section
         class="grid min-h-[70vh] items-center gap-8 rounded-2xl border border-[var(--border)]"
       >
@@ -79,13 +79,25 @@ const timelineSections = [
           <h1
             class="text-2xl font-semibold tracking-tight text-[var(--text-h)]"
           >
-            Cities of Paradox - A deep dive in culture and ethnic shifts
+            Cities of Paradox - A deep dive in culture 
           </h1>
-          <p class="text-base text-lg"> Hi Prof Jack!</p>
+          <p class="text-[var(--text-h)] text-lg">Hi Prof Jack!</p> <br>
           <p class="text-base leading-relaxed mx-auto flex justify-center">
-I’m really excited to share with you my research on this topic—I’ve put together a website that explores the historical and cultural links between Singapore and Hong Kong. Rather than just focusing on ten places, I ended up tracing 16 paired sites across the two cities and showing how they’re connected through migration, trade, religion, and memory, especially around the Taiping Rebellion and the 19th‑century Chinese diaspora.
-
-The site is structured as a long‑scroll journey, grouping the pairs into three phases—Entry, Exit, and Emergence—to trace how people arrived, settled into new roles and communities, and helped build today’s mixed‑cultural cities and heritage landscapes. I’d love to hear your thoughts whenever you have time to take a look!
+            I’m really excited to share with you my research on this topic—I’ve
+            put together a website that explores the historical and cultural
+            links between Singapore and Hong Kong. Rather than just focusing on
+            ten places, I ended up tracing 16 paired sites across the two cities
+            and showing how they’re connected through migration, trade,
+            religion, and memory, especially around the Taiping Rebellion and
+            the 19th‑century Chinese diaspora.
+          </p>
+          <br />
+          <p>
+            The site is structured as a long‑scroll journey, grouping the pairs
+            into three phases—Entry, Exit, and Emergence—to trace how people
+            arrived, settled into new roles and communities, and helped build
+            today’s mixed‑cultural cities and heritage landscapes. I hope you enjoy
+            this, as much as I enjoyed creating this website from scratch!
           </p>
         </div>
       </section>
@@ -100,10 +112,10 @@ The site is structured as a long‑scroll journey, grouping the pairs into three
       <Section08HeritageLanes />
     </div>
     <div>
-        The end
-        <br>
-        <br>
-        Thanks for reading prof! I hope this was as interesting as I hope to be.
+      The end
+      <br />
+      <br />
+      Thanks for reading prof! I hope this was as interesting as I hope to be.
     </div>
   </main>
 </template>
