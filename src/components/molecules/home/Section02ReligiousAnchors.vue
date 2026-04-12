@@ -5,7 +5,6 @@ import ThianHockKengTemple from "../../../assets/img/ThianHockKengTemple.jpg";
 import ImagePlaceholder from "../../atoms/ImagePlaceholder.vue";
 import SourcesList from "../../atoms/SourcesList.vue";
 
-
 const sources = [
   {
     label: "Thian Hock Keng Legacy",
@@ -36,7 +35,7 @@ const sources = [
       </div>
       <h1 class="pb-5">First religious anchors</h1>
       <p
-        class="inline-flex rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-700"
+        class="inline-flex rounded-full bg-stone-100 px-3 py-1 text-md text-stone-700"
       >
         1840s–1890s
       </p>
@@ -79,15 +78,15 @@ const sources = [
         class="w-full"
         title="Thian Hock Keng Temple"
         subtitle="Singapore"
-        :latitude="1.321889"
-        :longitude="103.84694"
+        :latitude="1.2812178787093473"
+        :longitude="103.84761393846388"
       />
       <MapPlaceholder
         class="w-full"
         title="Kwong Fook Tsz"
         subtitle="Hong Kong"
-        :latitude="22.284856"
-        :longitude="114.148178"
+        :latitude="22.285197269851405"
+        :longitude="114.14777467532258"
       />
     </div>
 
@@ -95,14 +94,14 @@ const sources = [
       <article
         class="rounded-xl border border-dashed border-stone-300 p-4 text-md text-white"
       >
-        💡 Built on Tan Tock Seng's donated land, whose hospital sits right next
-        door, both serving the Chinese migrant community.
+        💡 Built on Tan Tock Seng's donated land, serving the Chinese migrant
+        community.
       </article>
       <article
         class="rounded-xl border border-dashed border-stone-300 p-4 text-md text-white"
       >
-        💡 Houses thousands of soul tablets for of "homeless dead" migrants, making
-        it Hong Kong's oldest surviving "temple for the homeless dead".
+        💡 Houses thousands of soul tablets for of "homeless dead" migrants,
+        making it Hong Kong's oldest surviving "temple for the homeless dead".
       </article>
     </div>
     <div class="grid gap-5 md:grid-cols-2">
@@ -110,7 +109,7 @@ const sources = [
         <ImagePlaceholder
           :src="ThianHockKengTemple"
           alt="Old Chinatown"
-          class="h-[250px] w-full rounded-xl object-cover"
+          class="h-[450px] w-full rounded-xl object-cover"
         />
         <p>Thian Hock Keng Temple</p>
       </div>
@@ -118,7 +117,7 @@ const sources = [
         <ImagePlaceholder
           :src="KwongFookTsz"
           alt="Old Tai Ping Shan"
-          class="h-[250px] w-full rounded-xl object-cover"
+          class="h-[450px] w-full rounded-xl object-cover"
         />
         <p>Kwong Fook Tsz Temple</p>
       </div>

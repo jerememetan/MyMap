@@ -35,7 +35,7 @@ const sources = [
       </div>
       <h1 class="pb-5">Arrival and Displacement</h1>
       <p
-        class="inline-flex rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-700"
+        class="inline-flex rounded-full bg-stone-100 px-3 py-1 text-md text-stone-700"
       >
         1850s–1860s
       </p>
@@ -88,15 +88,15 @@ const sources = [
         class="w-full"
         title="Chinatown"
         subtitle="Singapore"
-        :latitude="1.2805071"
-        :longitude="103.8425942"
+        :latitude="1.283967395975784"
+        :longitude="103.84374250126699"
       />
       <MapPlaceholder
         class="w-full"
         title="Tai Ping Shan"
         subtitle="Hong Kong"
-        :latitude="22.2847968"
-        :longitude="114.1469561"
+        :latitude="22.28502197449521"
+        :longitude="114.14821268291142"
       />
     </div>
 

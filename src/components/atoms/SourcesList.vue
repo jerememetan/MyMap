@@ -18,7 +18,7 @@ defineProps({
       <li v-for="link in links" :key="`${link.label}-${link.href}`">
         <a
           :href="link.href"
-          class="text-sm text-yellow-400 hover:text-yellow-300"
+          class="text-md text-yellow-400 hover:text-yellow-300"
           target="_blank"
           rel="noopener noreferrer"
         >

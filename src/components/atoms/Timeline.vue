@@ -74,11 +74,11 @@ onBeforeUnmount(() => {
 
 <template>
   <aside
-    class="fixed left-6 top-1/2 z-30 hidden -translate-y-1/2 lg:block"
+    class="hidden lg:block lg:sticky lg:top-20 lg:self-start z-30"
     aria-label="Page timeline"
   >
     <div class="relative">
-      <div class="absolute left-[7px] top-0 h-full w-0.5 bg-stone-300" />
+      <div class="absolute left-[7px] top-0 h-full w-0.5 bg-stone-100" />
       <div
         class="absolute left-[7px] top-0 w-0.5 bg-gradient-to-b from-red-900 via-red-700 to-red-500 transition-[height] duration-300 ease-out"
         :style="{ height: progressHeight }"
@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
           @click="scrollToSection(section.id)"
         >
           <span
-            class="h-3.5 w-3.5 rounded-full border-2 border-slate-300 bg-white transition-all duration-200"
+            class="h-3.5 w-3.5 rounded-full border-2 border-slate-900 bg-white transition-all duration-200"
             :class="[
               section.id === activeSectionId || index < activeIndex
                 ? 'border-red-900 bg-red-900'
@@ -115,7 +115,9 @@ onBeforeUnmount(() => {
           >
             {{ section.number }}
           </span>
-          {{sections[index].title}}
+          <span class="max-w-[180px] truncate hidden md:inline">{{
+            sections[index].title
+          }}</span>
         </button>
       </div>
     </div>

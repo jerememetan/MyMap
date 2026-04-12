@@ -47,11 +47,11 @@ watch(
 <template>
   <div
     v-if="didError"
-    class="inline-block align-middle bg-gray-100"
+    class="inline-block align-middle bg-gray-100 "
     :class="attrs.class"
     :style="attrs.style"
   >
-    <div class="flex items-center justify-center w-full h-full">
+    <div class="flex items-center justify-center w-full h-full ">
       <img
         :src="resolvedFallbackSrc"
         alt="Error loading image"
