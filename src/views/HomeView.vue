@@ -62,6 +62,9 @@ const timelineSections = [
   },
 ];
 
+const revealClass =
+  "reveal-on-scroll opacity-0 translate-y-7 scale-[0.985]  transition-[opacity,transform,filter] duration-700 ease-[cubic-bezier(0.2,0.65,0.2,1)] [transition-delay:var(--reveal-delay)] will-change-[opacity,transform,filter] motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:scale-100 motion-reduce:blur-0 motion-reduce:transition-none [&.is-visible]:opacity-100 [&.is-visible]:translate-y-0 [&.is-visible]:scale-100 [&.is-visible]:blur-0";
+
 let revealObserver;
 
 onMounted(() => {
@@ -116,7 +119,10 @@ onBeforeUnmount(() => {
 
       <div class="flex-1 space-y-16">
         <section
-          class="reveal-on-scroll grid min-h-[70vh] items-center gap-8 rounded-2xl border border-[var(--border)]"
+          :class="[
+            revealClass,
+            'grid min-h-[70vh] items-center gap-8 rounded-2xl border border-[var(--border)]',
+          ]"
         >
           <div>
             <p
@@ -151,18 +157,21 @@ onBeforeUnmount(() => {
             </p>
           </div>
         </section>
-        <Section01ArrivalDisplacement class="reveal-on-scroll" />
-        <Section02ReligiousAnchors class="reveal-on-scroll" />
-        <Section03ClanHalls class="reveal-on-scroll" />
-        <Section04HakkaEnclaves class="reveal-on-scroll" />
-        <Section05KampongGlam class="reveal-on-scroll" />
-        <Section06LittleIndia class="reveal-on-scroll" />
-        <Section07SriMariamman class="reveal-on-scroll" />
-        <Section08HeritageLanes class="reveal-on-scroll" />
+        <Section01ArrivalDisplacement :class="revealClass" />
+        <Section02ReligiousAnchors :class="revealClass" />
+        <Section03ClanHalls :class="revealClass" />
+        <Section04HakkaEnclaves :class="revealClass" />
+        <Section05KampongGlam :class="revealClass" />
+        <Section06LittleIndia :class="revealClass" />
+        <Section07SriMariamman :class="revealClass" />
+        <Section08HeritageLanes :class="revealClass" />
       </div>
     </div>
     <section
-      class="reveal-on-scroll relative overflow-hidden rounded-3xl border border-amber-100/40 bg-linear-to-br from-amber-50/10 via-red-50/5 to-teal-100/10 px-6 py-16 text-center shadow-[0_20px_60px_rgba(0,0,0,0.25)] md:px-10"
+      :class="[
+        revealClass,
+        'relative overflow-hidden rounded-3xl border border-amber-100/40 bg-linear-to-br from-amber-50/10 via-red-50/5 to-teal-100/10 px-6 py-16 text-center shadow-[0_20px_60px_rgba(0,0,0,0.25)] md:px-10',
+      ]"
     >
       <div
         class="pointer-events-none absolute -top-16 -left-10 h-40 w-40 rounded-full bg-amber-200/20 blur-3xl"
@@ -175,58 +184,19 @@ onBeforeUnmount(() => {
         <p
           class="inline-flex rounded-full border border-amber-100/40 bg-amber-100/10 px-4 py-3 text-xs font-semibold tracking-[0.25em] text-amber-100"
         >
-          FINAL NOTE
+          THE END !
         </p>
 
-        <h2
-          class="text-4xl font-semibold tracking-[0.08em] text-(--text-h) md:text-6xl"
-        >
-          THE END
-        </h2>
-
-        <p
-          class="mx-auto max-w-2xl text-base leading-relaxed text-(--text) md:text-lg"
-        >
-          Thank you so much for reading, Prof. I really appreciate your time,
-          and I hope this project made the cultural links between Singapore and
-          Hong Kong feel vivid, human, and memorable.
+        <p class="mx-auto text-(--text) md:text-lg">
+          Thank you so much for reading, Prof Jack. I truly appreciate your
+          time, and I hope you enjoyed this project as much as I enjoyed
+          creating it, from the research all the way to building this website.
         </p>
 
         <p class="text-sm uppercase tracking-[0.2em] text-(--text)/80">
-          Made by: Jereme Tan
+          Made by: Tan Jing Min, Jereme
         </p>
       </div>
     </section>
   </main>
 </template>
-
-<style scoped>
-.reveal-on-scroll {
-  --reveal-delay: 0ms;
-  opacity: 0;
-  transform: translateY(28px) scale(0.985);
-  filter: blur(8px);
-  transition:
-    opacity 650ms ease,
-    transform 650ms cubic-bezier(0.2, 0.65, 0.2, 1),
-    filter 650ms ease;
-  transition-delay: var(--reveal-delay);
-  will-change: opacity, transform, filter;
-}
-
-.reveal-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-on-scroll,
-  .reveal-on-scroll.is-visible {
-    opacity: 1;
-    transform: none;
-    filter: none;
-    transition: none;
-  }
-}
-</style>

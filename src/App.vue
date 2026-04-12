@@ -4,9 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="app-shell">
-    <header class="top-nav">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/test">Test Library</RouterLink>
+    <header class="top-nav hidden">
     </header>
 
     <main class="route-content">
